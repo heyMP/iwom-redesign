@@ -1,0 +1,62 @@
+/**
+ * Branding
+ */
+
+.branding {
+  background: gray;
+  padding: .5em;
+  @include pad(0);
+}
+
+.branding__sitename-wrapper {
+  @include span(5);
+}
+
+.branding__sitename {
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 185px;
+  }
+}
+
+.branding__nav {
+  @include span(7 last);
+  margin: 0;
+  padding: 0;
+  margin-top: 6%;
+  @include breakpoint(35em) {
+    margin-top: 1.5em;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.branding__navitem {
+  float: right;
+
+  + .branding__navitem {
+    margin-right: .5em;
+  }
+
+  a {
+    padding: .5em;
+    font-size: 1.1em;
+    line-height: 0;
+    height: 0;
+    overflow: visible;
+    color: white;
+  }
+}

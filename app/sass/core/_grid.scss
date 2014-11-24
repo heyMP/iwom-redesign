@@ -16,6 +16,6 @@ $susy: (
 %container {
   @include container;
   @include pad(gutter());
-  @include show-grid();
+  // @include show-grid();
   @extend %clearfix;
 }
