@@ -373,12 +373,60 @@ category: Components - Navigation
 
 ```
 */
+.nav {
+  padding-left: 2.85714%;
+  padding-right: 2.85714%;
+  background: lightgray;
+  display: block;
+  overflow: hidden;
+}
+
+.nav__menu {
+  margin: 0;
+  padding: 0;
+}
+.nav__menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav__menu a {
+  box-sizing: content-box;
+  margin-right: -2.85714%;
+  margin-left: -2.85714%;
+  padding-right: 2.85714%;
+  padding-left: 2.85714%;
+  background: lightgray;
+  width: 100;
+  padding: .5em;
+  padding-left: 2.85714%;
+  padding-right: 2.85714%;
+  display: block;
+  border-bottom: 1px solid #e8e8e8;
+}
+.nav__menu a:hover {
+  background: #e8e8e8;
+}
+
+.js .nav__menu {
+  max-height: 0;
+  -webkit-transition: all .1s ease;
+          transition: all .1s ease;
+}
+
+.js .nav__menu.opened {
+  max-height: 800px;
+  max-height: 100vh;
+  -webkit-transition: all .8s ease;
+          transition: all .8s ease;
+}
+
 /**
  * Branding
  */
 .branding {
   background: gray;
-  padding: .5em;
+  padding: .2em;
   padding-left: 0%;
   padding-right: 0%;
 }

@@ -14,9 +14,45 @@ category: Components - Navigation
 */
 
 .nav {
-
+  @include pad(gutter());
+  background: lightgray;
+  display: block;
+  overflow: hidden;
 }
 
-.nav__sitename {
+.nav__menu {
+  margin: 0;
+  padding: 0;
 
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    @include bleed-x(gutter());
+    background: lightgray;
+    width: 100;
+    padding: .5em;
+    @include pad(gutter());
+    display: block;
+    border-bottom: 1px solid lightgray * 1.1;
+
+    &:hover {
+      background: lightgray * 1.1;
+    }
+  }
+}
+
+// States
+.js .nav__menu {
+  max-height: 0;
+  transition: all .1s ease;
+}
+
+.js .nav__menu.opened {
+  max-height: 800px;
+  max-height: 100vh;
+  transition: all .8s ease;
 }

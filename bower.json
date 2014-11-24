@@ -15,6 +15,6 @@
   "devDependencies": {
     "north": "~0.2.0",
     "Cortana": "~1.2.7",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
   }
 }
