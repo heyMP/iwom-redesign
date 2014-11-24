@@ -1,0 +1,21 @@
+{
+  "name": "heymp",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^0.7.4",
+    "browserify": "^6.3.2",
+    "compass-options": "^0.1.1",
+    "gulp": "^3.6.0",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-compass": "^2.0.1",
+    "gulp-hologram": "^1.2.0",
+    "gulp-jshint": "^1.5.1",
+    "gulp-plumber": "^0.6.6",
+    "gulp-shell": "^0.2.4",
+    "jshint-stylish": "^0.1.5"
+  },
+  "scripts": {
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+  }
+}

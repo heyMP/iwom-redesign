@@ -1,0 +1,47 @@
+/**
+ * Misc
+ */
+
+.clearfix,
+%clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+@mixin margin-fixer() {
+  > *:first-child {
+    margin-top: 0;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin owl($spacing: NULL) {
+  > * + * {
+    @if $spacing == NULL {
+      margin-top: 1em;
+    }
+    @else {
+      margin-top: $spacing;
+    }
+  }
+}
+
+%container--standard {
+  @extend %clearfix;
+  @include margin-fixer;
+  @include owl;
+}
+
+@mixin vertical-center {
+  position: relative;
+  height: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin container {
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
