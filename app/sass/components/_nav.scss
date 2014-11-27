@@ -2,17 +2,6 @@
  * Nav
  */
 
-/*doc
----
-title: Navigation
-name: navigation
-category: Components - Navigation
----
-```html_example
-
-```
-*/
-
 .nav {
   @include pad(gutter());
   background: lightgray;
@@ -38,9 +27,17 @@ category: Components - Navigation
     @include pad(gutter());
     display: block;
     border-bottom: 1px solid lightgray * 1.1;
+    color: black;
+    text-decoration: none;
 
     &:hover {
       background: lightgray * 1.1;
+    }
+
+    span {
+      @include container;
+      @include pad(gutter());
+      display: block;
     }
   }
 }

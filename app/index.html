@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-accessible-tabs/js/jquery.tabs.js"></script>
     <script type="text/javascript" src="js/dist/bundle.js"></script>
   </head>
   <body>
@@ -30,27 +31,85 @@
 
     <nav class="nav">
       <ul class="nav__menu">
-        <li class="nav__menuitem"><a href="#1/">Hunting Wear</a></li>
-        <li class="nav__menuitem"><a href="#1/">Stadium Wear</a></li>
-        <li class="nav__menuitem"><a href="#1/">Dealers</a></li>
-        <li class="nav__menuitem"><a href="#1/">Testimonials</a></li>
-        <li class="nav__menuitem"><a href="styleguide/">Styleguide</a></li>
+        <li class="nav__menuitem"><a href="#1/"><span>Hunting Wear</span></a></li>
+        <li class="nav__menuitem"><a href="#1/"><span>Stadium Wear</span></a></li>
+        <li class="nav__menuitem"><a href="#1/"><span>Dealers</span></a></li>
+        <li class="nav__menuitem"><a href="#1/"><span>Testimonials</span></a></li>
+        <li class="nav__menuitem"><a href="styleguide/"><span>Styleguide</span></a></li>
       </ul>
     </nav>
 
     <main class="main">
       <div class="container">
-        <h1>Let's start coding!</h1>
-        <p>Aliquam lectus orci, adipiscing et, sodales ac, feugiat non, lacus. Ut dictum velit nec est. Quisque posuere, purus sit amet malesuada blandit, sapien sapien auctor arcu, sed pulvinar felis mi sollicitudin tortor. Maecenas volutpat, nisl et dignissim pharetra, urna lectus ultrices est, vel pretium pede turpis id velit. Aliquam sagittis magna in felis egestas rutrum. Proin wisi libero, vestibulum eget, pulvinar nec, suscipit ut, mi. Integer in arcu ultricies leo dapibus ultricies. Sed rhoncus lobortis dolor. Suspendisse dolor. Mauris sapien velit, pulvinar non, rutrum non, consectetuer eget, metus. Morbi tincidunt lorem at urna. Etiam porta. Ut mauris. Phasellus tristique rhoncus magna. Nam tincidunt consequat urna. Sed tempor.</p>
-        <p>Aliquam lectus orci, adipiscing et, sodales ac, feugiat non, lacus. Ut dictum velit nec est. Quisque posuere, purus sit amet malesuada blandit, sapien sapien auctor arcu, sed pulvinar felis mi sollicitudin tortor. Maecenas volutpat, nisl et dignissim pharetra, urna lectus ultrices est, vel pretium pede turpis id velit. Aliquam sagittis magna in felis egestas rutrum. Proin wisi libero, vestibulum eget, pulvinar nec, suscipit ut, mi. Integer in arcu ultricies leo dapibus ultricies. Sed rhoncus lobortis dolor. Suspendisse dolor. Mauris sapien velit, pulvinar non, rutrum non, consectetuer eget, metus. Morbi tincidunt lorem at urna. Etiam porta. Ut mauris. Phasellus tristique rhoncus magna. Nam tincidunt consequat urna. Sed tempor.</p>
-        <p>Aliquam lectus orci, adipiscing et, sodales ac, feugiat non, lacus. Ut dictum velit nec est. Quisque posuere, purus sit amet malesuada blandit, sapien sapien auctor arcu, sed pulvinar felis mi sollicitudin tortor. Maecenas volutpat, nisl et dignissim pharetra, urna lectus ultrices est, vel pretium pede turpis id velit. Aliquam sagittis magna in felis egestas rutrum. Proin wisi libero, vestibulum eget, pulvinar nec, suscipit ut, mi. Integer in arcu ultricies leo dapibus ultricies. Sed rhoncus lobortis dolor. Suspendisse dolor. Mauris sapien velit, pulvinar non, rutrum non, consectetuer eget, metus. Morbi tincidunt lorem at urna. Etiam porta. Ut mauris. Phasellus tristique rhoncus magna. Nam tincidunt consequat urna. Sed tempor.</p>
-      </div>
+      <article class="product">
+        <header class="product__header">
+          <h1 class="product__title">IWOM XT</h1>
+          <div class="product__series">Brutal Geat Series</div>
+        </header>
+        <div class="product__gallery">
+          <img src="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png">
+        </div>
+        <div class="product__description">
+          <p>Hardcore Hunter's Suit<br>
+          The IWOM XT was designed for hunters in the most extreme conditions.  Waterproof/windproof hunting from +40 degrees to sub zero temperatures is not a problem with the IWOM XT.  Perfect for late season whitetail or trips to Canada.</p>
+        </div>
+        <div class="product__tabs tabs">
+          <h3 class="product__tab tabs__head">Features</h3>
+          <div class="product__tabbody tabs__body">
+            Premium Thinsulate
+            Windproof
+            Waterproof
+            Handwarmer Pocket (Removable)
+            Kangaroo Pocket
+            Fully Zippered Bottom
+            Freedom Waist Belt System
+            Attached Rain Hood
+            Self-contained Fanny Pack Function
+            Insulated Zip-Closed Bottom Panel
+            Hand Gaiters
+            Integrated Facemask
+            SmartSilver Scent Management
+            Taped Seams
+            Tether Strap Opening for Safety Harnes
+          </div>
+          <h3 class="product__tab tabs__head">Specs</h3>
+          <div class="product__tabbody tabs__body">
+            Premium Thinsulate
+            Windproof
+            Waterproof
+            Handwarmer Pocket (Removable)
+            Kangaroo Pocket
+            Fully Zippered Bottom
+            Freedom Waist Belt System
+            Attached Rain Hood
+            Self-contained Fanny Pack Function
+            Insulated Zip-Closed Bottom Panel
+            Hand Gaiters
+            Integrated Facemask
+            SmartSilver Scent Management
+            Taped Seams
+            Tether Strap Opening for Safety Harnes
+          </div>
+          <h3 class="product__tab tabs__head">Sizing</h3>
+          <div class="product__tabbody tabs__body">
+            Premium Thinsulate
+            Windproof
+            Waterproof
+            Handwarmer Pocket (Removable)
+            Kangaroo Pocket
+            Fully Zippered Bottom
+            Freedom Waist Belt System
+            Attached Rain Hood
+            Self-contained Fanny Pack Function
+            Insulated Zip-Closed Bottom Panel
+            Hand Gaiters
+            Integrated Facemask
+            SmartSilver Scent Management
+            Taped Seams
+            Tether Strap Opening for Safety Harnes
+          </div>
+        </div>
+      </article>
     </main>
-
-    <footer class="footer">
-      <div class="container">
-        <p>Footer Content</p>
-      </div>
-    </footer>
   </body>
 </html>

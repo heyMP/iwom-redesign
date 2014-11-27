@@ -1,1 +1,60 @@
-$color-primary: lightblue;
+/**
+ * Colors
+ */
+
+/*doc
+---
+title: Colors
+name: colors
+category: Core - Colors
+---
+This color palette is maintained in ``core/colors``.
+To add new colors, simply add a new key, value pair to the ``$colors``
+map.
+
+
+
+```html_example
+  <div id="hologram-color-palette">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+```
+*/
+
+$colors: (
+  primary: #EC3022,
+  secondary: green,
+  tertiary: blue
+);
+
+
+// Automatically create styles for our styleguide color palette.
+$i: 0;
+@each $key, $value in $colors {
+  $i: $i + 1;
+  #hologram-color-palette {
+    div:nth-child(#{$i}) {
+      background: #{$value};
+      height: 100px;
+      width: 100px;
+      float: left;
+      margin-right: 10px;
+
+      &:after {
+        display: block;
+        content: "#{$key}";
+        text-align: center;
+      }
+    }
+  }
+}
