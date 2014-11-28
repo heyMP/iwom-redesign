@@ -13,6 +13,8 @@ custom_markdown: ./app/bower_components/Cortana/CortanaMarkdownRenderer.rb
 
 # List all css to include for the styleguide render examples (path from styleguide directory)
 css_include:
+  - '../bower_components/swiper/dist/idangerous.swiper.css'
+  - '../bower_components/swipebox/src/css/swipebox.min.css'
   - '../css/styles.css'
 
 # List all js to include for the styleguide render examples (path from styleguide directory)
@@ -20,6 +22,8 @@ js_include:
   - 'http://code.jquery.com/jquery-1.7.2.min.js'
   - '../bower_components/modernizr/modernizr.js'
   - '../bower_components/jquery-accessible-tabs/js/jquery.tabs.js'
+  - '../bower_components/swiper/dist/idangerous.swiper.min.js'
+  - '../bower_components/swipebox/src/js/jquery.swipebox.min.js'
   - '../js/dist/bundle.js'
 
 # Mark which category should be the index page

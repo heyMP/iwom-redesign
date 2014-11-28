@@ -101,5 +101,5 @@ content that is wrapped in ```.tabs__body```.
 }
 
 .tabs {
-  @include style-tabs(lightgray, #A5A4A4, black);
+  @include style-tabs(lightgray, #A5A4A4, map-get($colors, primary));
 }

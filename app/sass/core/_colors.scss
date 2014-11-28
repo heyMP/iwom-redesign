@@ -31,17 +31,22 @@ map.
 ```
 */
 
+// Color Schemer
+$cs-primary: #EC3022;
+$cs-scheme: triad;
+
 $colors: (
-  primary: #EC3022,
-  secondary: green,
-  tertiary: blue
+  primary: cs-primary(),
+  secondary: cs-secondary(),
+  tertiary: cs-tertiary(),
+  quadrary: cs-quadrary()
 );
 
 
 // Automatically create styles for our styleguide color palette.
 $i: 0;
 @each $key, $value in $colors {
-  $i: $i + 1;
+  $i: $i + 1 !global;
   #hologram-color-palette {
     div:nth-child(#{$i}) {
       background: #{$value};

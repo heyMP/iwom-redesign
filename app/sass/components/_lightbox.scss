@@ -1,0 +1,25 @@
+/**
+*
+* Lightbox
+*
+**/
+
+/*doc
+---
+title: Lightbox
+name: lightbox
+category: Components - Lightbox
+---
+This component utilizes the [Swipebox](https://github.com/brutaldesign/swipebox)
+javascript library. Point an ``<a>`` tag with the class of ``swipebox`` to an image.
+Any html content can be within the a tag.
+
+```html_example
+    <a href="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png" class="swipebox" title="My Caption">
+      <img src="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png" width="100" height="200">
+    </a>
+    <a href="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-STALKER_0.png" class="swipebox" title="My Caption">
+      <img src="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-STALKER_0.png" width="100" height="200">
+    </a>
+```
+*/
