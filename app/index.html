@@ -9,10 +9,12 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="bower_components/swiper/dist/idangerous.swiper.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/swipebox/src/css/swipebox.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
     <script type="text/javascript" src="bower_components/jquery-accessible-tabs/js/jquery.tabs.js"></script>
     <script type="text/javascript" src="bower_components/swiper/dist/idangerous.swiper.min.js"></script>
+    <script type="text/javascript" src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
     <script type="text/javascript" src="js/dist/bundle.js"></script>
   </head>
   <body>
@@ -51,26 +53,20 @@
         <div class="product__gallery">
           <img src="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png">
         </div>
-        <div class="swiper-container">
+        <div class="swiper-container swiper--pager">
           <div class="swiper-wrapper">
-              <!--First Slide-->
               <div class="swiper-slide">
-                <img src="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png">
+                <a href="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png" class="swipebox" title="My Caption">
+                  <img src="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png">
+                </a>
               </div>
-
-              <!--Second Slide-->
               <div class="swiper-slide">
-                <img src="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-STALKER_0.png">
-              </div>
-
-              <!--Third Slide-->
-              <div class="swiper-slide">
-                test
-              </div>
-              <div class="swiper-pager">
-
+                <a href="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-STALKER_0.png" class="swipebox" title="My Caption">
+                  <img src="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-STALKER_0.png">
+                </a>
               </div>
           </div>
+          <div class="swiper-pager"></div>
         </div>
         <div class="product__description">
           <p>Hardcore Hunter's Suit<br>
