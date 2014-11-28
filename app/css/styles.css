@@ -227,6 +227,11 @@ th {
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /**
  * Misc
  */
@@ -694,21 +699,16 @@ Here is an example of using the Gallery component with the Lightbox component.
 ```html_example
     <div class="swiper-container swiper--pager">
       <div class="swiper-wrapper">
-          <!--First Slide-->
           <div class="swiper-slide">
             <a href="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png" class="swipebox" title="My Caption">
               <img src="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png" width="100" height="200">
             </a>
           </div>
-
-          <!--Second Slide-->
           <div class="swiper-slide">
             <a href="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-STALKER_0.png" class="swipebox" title="My Caption">
               <img src="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-STALKER_0.png" width="100" height="200">
             </a>
           </div>
-
-          <!--Third Slide-->
           <div class="swiper-slide">
             Slider text information
           </div>
