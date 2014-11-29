@@ -13,7 +13,7 @@ category: Components - Gallery
 This component utilizes the [Swiper](http://www.idangero.us/sliders/swiper) javascript library.
 
 ```html_example
-    <div class="swiper-container swiper--pager">
+    <div class="swiper-container swiper--pager swiper--images">
       <div class="swiper-wrapper">
           <!--First Slide-->
           <div class="swiper-slide">
@@ -37,7 +37,7 @@ This component utilizes the [Swiper](http://www.idangero.us/sliders/swiper) java
 Here is an example of using the Gallery component with the Lightbox component.
 
 ```html_example
-    <div class="swiper-container swiper--pager">
+    <div class="swiper-container swiper--pager swiper--images">
       <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png" class="swipebox" title="My Caption">
@@ -65,6 +65,8 @@ Here is an example of using the Gallery component with the Lightbox component.
   bottom: 0;
   left: 0;
   z-index: 10;
+  width: 100%;
+  text-align: center;
 }
 
 .swiper-pagination-switch {
@@ -83,5 +85,11 @@ Here is an example of using the Gallery component with the Lightbox component.
 
   &.swiper-active-switch {
     background-color: map-get($colors, primary);
+  }
+}
+
+.swiper--images {
+  .swiper-slide {
+    text-align: center;
   }
 }
