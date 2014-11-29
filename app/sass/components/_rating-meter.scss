@@ -33,6 +33,10 @@ category: Components - Rating Meter
 
 .ratingmeter {
   @extend %clearfix;
+
+  & + & {
+    margin-top: .5em;
+  }
 }
 
 .ratingmeter__label {
@@ -87,9 +91,5 @@ category: Components - Rating Meter
   }
   &[data-rating="10"]:before {
     width: 100%;
-  }
-
-  & + & {
-    margin-top: 1em;
   }
 }

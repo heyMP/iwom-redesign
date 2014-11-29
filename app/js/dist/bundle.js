@@ -26,10 +26,11 @@
   function swiperGallery() {
     var $swiper = $('.swiper-container');
     var pager = $swiper.hasClass('swiper--pager') === true ? true : false;
+    var responsive = $swiper.hasClass('swiper--responsive') === true ? true : false;
 
     $swiper.swiper({
       speed : 500,
-      calculateHeight: true,
+      calculateHeight: responsive,
       keyboardControl: true,
       pagination: '.swiper-pager',
       paginationClickable: pager,

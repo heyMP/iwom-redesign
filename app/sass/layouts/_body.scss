@@ -1,6 +1,6 @@
 body {
   font-size: $base-font-size;
-  line-height: $base-line-height;
+  line-height: 120%;
   @include breakpoint(500px) {
     font-size: $base-font-size * 1.1;
   }

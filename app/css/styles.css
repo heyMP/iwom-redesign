@@ -237,7 +237,8 @@ img {
  */
 .clearfix,
 .container,
-.ratingmeter {
+.ratingmeter,
+.testimonial {
   overflow: auto;
   zoom: 1;
 }
@@ -339,21 +340,6 @@ map.
   padding-right: 2.85714%;
 }
 
-body {
-  font-size: 16px;
-  line-height: 1.8em;
-}
-@media (min-width: 500px) {
-  body {
-    font-size: 17.6px;
-  }
-}
-@media (min-width: 800px) {
-  body {
-    font-size: 19.2px;
-  }
-}
-
 /**
 *
 * Buttons
@@ -377,10 +363,10 @@ category: Components - Buttons
 */
 .button, .button--primary, .button--secondary {
   display: inline-block;
-  padding: 12px 32px;
-  margin-bottom: 13px;
-  margin-top: 13px;
-  min-height: 26px;
+  padding: 11px 32px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  min-height: 24px;
   text-align: center;
   font-weight: 600;
   text-decoration: none;
@@ -673,8 +659,16 @@ category: Components - Gallery
 ---
 This component utilizes the [Swiper](http://www.idangero.us/sliders/swiper) javascript library.
 
+###Options
+``swiper--pager`` will place a pager at the bottom of the gallery.
+
+``swiper--responsive`` will automatically calculate the height of a gallery.
+
+``swiper--images`` will let the gallery know that this is an image gallery only.
+
+
 ```html_example
-    <div class="swiper-container swiper--pager swiper--images">
+    <div class="swiper-container swiper--pager swiper--images swiper--responsive">
       <div class="swiper-wrapper">
           <!--First Slide-->
           <div class="swiper-slide">
@@ -698,7 +692,7 @@ This component utilizes the [Swiper](http://www.idangero.us/sliders/swiper) java
 Here is an example of using the Gallery component with the Lightbox component.
 
 ```html_example
-    <div class="swiper-container swiper--pager swiper--images">
+    <div class="swiper-container swiper--pager swiper--images swiper--responsive">
       <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png" class="swipebox" title="My Caption">
@@ -805,6 +799,10 @@ category: Components - Rating Meter
   </div>
 ```
 */
+.ratingmeter + .ratingmeter {
+  margin-top: .5em;
+}
+
 .ratingmeter__label {
   font-size: .8em;
   font-weight: bold;
@@ -859,6 +857,79 @@ category: Components - Rating Meter
 .ratingmeter__meter[data-rating="10"]:before {
   width: 100%;
 }
-.ratingmeter__meter + .ratingmeter__meter {
-  margin-top: 1em;
+
+/**
+*
+* Testimonials
+*
+**/
+/*doc
+---
+title: Testimonials
+name: testimonials
+category: Components - Testimonials
+---
+```html_example
+    <div class='testimonial'>
+      <a class="testimonial__image swipebox" title="Nick Hendrickson, Illinois" href="http://www.iwomouterwear.com/sites/default/files/styles/colorbox_full/public/13235_960105517337787_58443802205014507_n.jpg" class="testimonial__image"><img src="http://www.iwomouterwear.com/sites/default/files/styles/colorbox_full/public/13235_960105517337787_58443802205014507_n.jpg"></a>
+      <div class="testimonial__message">This is a deer my daughter was able to harvest while wearing her new suit. It worked really well. Thanks for a great product and can't wait for her to get to try the suit during the late season.</div>
+      <div class="testimonial__author">Nick Hendrickson, Illinois</div>
+    </div>
+
+    <div class='testimonial'>
+      <a class="testimonial__image swipebox" title="Steve Hipson, Hard Core Hunter TV" href="http://www.iwomouterwear.com/sites/default/files/styles/colorbox_full/public/Steve%20Hipson.jpg"><img src="http://www.iwomouterwear.com/sites/default/files/styles/colorbox_full/public/Steve%20Hipson.jpg"></a>
+      <div class="testimonial__message">I'm in northern Ontario hunting wolves for the show its -20 with a windchill of -45 an I am warm and comfortable in my IWOM Thought you should know Thanks</div>
+      <div class="testimonial__author">Steve Hipson, Hard Core Hunter TV</div>
+    </div>
+```
+*/
+.testimonial {
+  clear: both;
+}
+.testimonial + .testimonial {
+  margin-top: 5.71429%;
+}
+
+.testimonial__image {
+  width: 31.42857%;
+  float: left;
+  margin-right: 2.85714%;
+  margin-bottom: 1em;
+}
+
+.testimonial__message {
+  width: 65.71429%;
+  float: right;
+  margin-right: 0;
+  font-size: .8em;
+}
+
+.testimonial__author {
+  width: 65.71429%;
+  float: right;
+  margin-right: 0;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+/**
+ * Product
+ */
+.product__gallery img {
+  height: 20em;
+}
+
+body {
+  font-size: 16px;
+  line-height: 120%;
+}
+@media (min-width: 500px) {
+  body {
+    font-size: 17.6px;
+  }
+}
+@media (min-width: 800px) {
+  body {
+    font-size: 19.2px;
+  }
 }

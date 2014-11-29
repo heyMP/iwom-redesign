@@ -12,8 +12,16 @@ category: Components - Gallery
 ---
 This component utilizes the [Swiper](http://www.idangero.us/sliders/swiper) javascript library.
 
+###Options
+``swiper--pager`` will place a pager at the bottom of the gallery.
+
+``swiper--responsive`` will automatically calculate the height of a gallery.
+
+``swiper--images`` will let the gallery know that this is an image gallery only.
+
+
 ```html_example
-    <div class="swiper-container swiper--pager swiper--images">
+    <div class="swiper-container swiper--pager swiper--images swiper--responsive">
       <div class="swiper-wrapper">
           <!--First Slide-->
           <div class="swiper-slide">
@@ -37,7 +45,7 @@ This component utilizes the [Swiper](http://www.idangero.us/sliders/swiper) java
 Here is an example of using the Gallery component with the Lightbox component.
 
 ```html_example
-    <div class="swiper-container swiper--pager swiper--images">
+    <div class="swiper-container swiper--pager swiper--images swiper--responsive">
       <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="http://www.iwomouterwear.com/sites/default/files/styles/product_large/public/field/image/IWOM-XT.png" class="swipebox" title="My Caption">

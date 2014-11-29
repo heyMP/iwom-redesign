@@ -14,11 +14,6 @@
 @import "core/colors";
 @import "core/grid";
 
-// Layouts
-@import "layouts/body";
-@import "layouts/main";
-@import "layouts/footer";
-
 // Components
 @import "components/buttons";
 @import "components/alerts";
@@ -28,3 +23,12 @@
 @import "components/gallery";
 @import "components/lightbox";
 @import "components/rating-meter";
+@import "components/testimonials";
+
+// Nodes
+@import "nodes/product";
+
+// Layouts
+@import "layouts/body";
+@import "layouts/main";
+@import "layouts/footer";

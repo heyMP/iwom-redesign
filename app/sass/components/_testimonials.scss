@@ -1,0 +1,51 @@
+/**
+*
+* Testimonials
+*
+**/
+
+/*doc
+---
+title: Testimonials
+name: testimonials
+category: Components - Testimonials
+---
+```html_example
+    <div class='testimonial'>
+      <a class="testimonial__image swipebox" title="Nick Hendrickson, Illinois" href="http://www.iwomouterwear.com/sites/default/files/styles/colorbox_full/public/13235_960105517337787_58443802205014507_n.jpg" class="testimonial__image"><img src="http://www.iwomouterwear.com/sites/default/files/styles/colorbox_full/public/13235_960105517337787_58443802205014507_n.jpg"></a>
+      <div class="testimonial__message">This is a deer my daughter was able to harvest while wearing her new suit. It worked really well. Thanks for a great product and can't wait for her to get to try the suit during the late season.</div>
+      <div class="testimonial__author">Nick Hendrickson, Illinois</div>
+    </div>
+
+    <div class='testimonial'>
+      <a class="testimonial__image swipebox" title="Steve Hipson, Hard Core Hunter TV" href="http://www.iwomouterwear.com/sites/default/files/styles/colorbox_full/public/Steve%20Hipson.jpg"><img src="http://www.iwomouterwear.com/sites/default/files/styles/colorbox_full/public/Steve%20Hipson.jpg"></a>
+      <div class="testimonial__message">I'm in northern Ontario hunting wolves for the show its -20 with a windchill of -45 an I am warm and comfortable in my IWOM Thought you should know Thanks</div>
+      <div class="testimonial__author">Steve Hipson, Hard Core Hunter TV</div>
+    </div>
+```
+*/
+
+.testimonial {
+  @extend %clearfix;
+  clear: both;
+
+  & + & {
+    margin-top: gutter() * 2;
+  }
+}
+
+.testimonial__image {
+  @include span(4 of 12);
+  margin-bottom: 1em;
+}
+
+.testimonial__message {
+  @include span(8 of 12 last);
+  font-size: .8em;
+}
+
+.testimonial__author {
+  @include span(8 of 12 last);
+  font-size: .8em;
+  font-weight: bold;
+}

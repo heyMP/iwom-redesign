@@ -23,10 +23,10 @@ category: Components - Buttons
 
 .button {
   display: inline-block;
-  padding: (($lineHeight / 2) - 1) 32px;
-  margin-bottom: $lineHeight / 2;
-  margin-top: $lineHeight / 2;
-  min-height: $lineHeight;
+  padding: (($base-line-height / 2) - 1) 32px;
+  margin-bottom: $base-line-height / 2;
+  margin-top: $base-line-height / 2;
+  min-height: $base-line-height;
   text-align: center;
   font-weight: 600;
   text-decoration: none;
