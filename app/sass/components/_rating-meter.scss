@@ -1,0 +1,95 @@
+/**
+ * Rating Meter
+ */
+
+/*doc
+---
+title: Rating Meter
+name: ratingmeter
+category: Components - Rating Meter
+---
+
+```html_example
+  <div class="ratingmeter">
+    <div class="ratingmeter__label">Rating</div>
+    <div class="ratingmeter__meter" data-rating="8">8 out of 10</div>
+  </div>
+```
+```html_example
+  <div class="ratingmeter">
+    <div class="ratingmeter__label">Warmth</div>
+    <div class="ratingmeter__meter" data-rating="10">10 out of 10</div>
+  </div>
+  <div class="ratingmeter">
+    <div class="ratingmeter__label">Mobility</div>
+    <div class="ratingmeter__meter" data-rating="6">6 out of 10</div>
+  </div>
+  <div class="ratingmeter">
+    <div class="ratingmeter__label">Weather</div>
+    <div class="ratingmeter__meter" data-rating="10">8 out of 10</div>
+  </div>
+```
+*/
+
+.ratingmeter {
+  @extend %clearfix;
+}
+
+.ratingmeter__label {
+  font-size: .8em;
+  font-weight: bold;
+  @include breakpoint(20em) {
+    float: left;
+    width: 20%;
+  }
+}
+
+.ratingmeter__meter {
+  background: gray;
+  height: 1.3em;
+  display: block;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    background: map-get($colors, primary);
+    display: block;
+    width: 0%;
+    height: 1.3em;
+  }
+
+  &[data-rating="1"]:before {
+    width: 10%;
+  }
+  &[data-rating="2"]:before {
+    width: 20%;
+  }
+  &[data-rating="3"]:before {
+    width: 30%;
+  }
+  &[data-rating="4"]:before {
+    width: 40%;
+  }
+  &[data-rating="5"]:before {
+    width: 50%;
+  }
+  &[data-rating="6"]:before {
+    width: 60%;
+  }
+  &[data-rating="7"]:before {
+    width: 70%;
+  }
+  &[data-rating="8"]:before {
+    width: 80%;
+  }
+  &[data-rating="9"]:before {
+    width: 90%;
+  }
+  &[data-rating="10"]:before {
+    width: 100%;
+  }
+
+  & + & {
+    margin-top: 1em;
+  }
+}

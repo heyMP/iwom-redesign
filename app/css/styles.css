@@ -236,7 +236,8 @@ img {
  * Misc
  */
 .clearfix,
-.container {
+.container,
+.ratingmeter {
   overflow: auto;
   zoom: 1;
 }
@@ -767,3 +768,91 @@ Any html content can be within the a tag.
     </a>
 ```
 */
+/**
+ * Rating Meter
+ */
+/*doc
+---
+title: Rating Meter
+name: ratingmeter
+category: Components - Rating Meter
+---
+
+```html_example
+  <div class="ratingmeter">
+    <div class="ratingmeter__label">Rating</div>
+    <div class="ratingmeter__meter" data-rating="8">8 out of 10</div>
+  </div>
+```
+```html_example
+  <div class="ratingmeter">
+    <div class="ratingmeter__label">Warmth</div>
+    <div class="ratingmeter__meter" data-rating="10">10 out of 10</div>
+  </div>
+  <div class="ratingmeter">
+    <div class="ratingmeter__label">Mobility</div>
+    <div class="ratingmeter__meter" data-rating="6">6 out of 10</div>
+  </div>
+  <div class="ratingmeter">
+    <div class="ratingmeter__label">Weather</div>
+    <div class="ratingmeter__meter" data-rating="10">8 out of 10</div>
+  </div>
+```
+*/
+.ratingmeter__label {
+  font-size: .8em;
+  font-weight: bold;
+}
+@media (min-width: 20em) {
+  .ratingmeter__label {
+    float: left;
+    width: 20%;
+  }
+}
+
+.ratingmeter__meter {
+  background: gray;
+  height: 1.3em;
+  display: block;
+  overflow: hidden;
+}
+.ratingmeter__meter:before {
+  content: '';
+  background: #ec3022;
+  display: block;
+  width: 0%;
+  height: 1.3em;
+}
+.ratingmeter__meter[data-rating="1"]:before {
+  width: 10%;
+}
+.ratingmeter__meter[data-rating="2"]:before {
+  width: 20%;
+}
+.ratingmeter__meter[data-rating="3"]:before {
+  width: 30%;
+}
+.ratingmeter__meter[data-rating="4"]:before {
+  width: 40%;
+}
+.ratingmeter__meter[data-rating="5"]:before {
+  width: 50%;
+}
+.ratingmeter__meter[data-rating="6"]:before {
+  width: 60%;
+}
+.ratingmeter__meter[data-rating="7"]:before {
+  width: 70%;
+}
+.ratingmeter__meter[data-rating="8"]:before {
+  width: 80%;
+}
+.ratingmeter__meter[data-rating="9"]:before {
+  width: 90%;
+}
+.ratingmeter__meter[data-rating="10"]:before {
+  width: 100%;
+}
+.ratingmeter__meter + .ratingmeter__meter {
+  margin-top: 1em;
+}
