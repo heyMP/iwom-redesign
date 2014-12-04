@@ -23,7 +23,7 @@
     @include bleed-x(gutter());
     background: lightgray;
     width: 100;
-    padding: .5em;
+    padding: 1em;
     @include pad(gutter());
     display: block;
     border-bottom: 1px solid lightgray * 1.1;
