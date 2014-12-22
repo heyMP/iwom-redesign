@@ -7,10 +7,12 @@
     <title>IWOM Outerwear</title>
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="bower_components/materialize/dist/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="bower_components/swiper/dist/idangerous.swiper.css">
     <link rel="stylesheet" type="text/css" href="bower_components/swipebox/src/css/swipebox.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
     <script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
     <script type="text/javascript" src="bower_components/jquery-accessible-tabs/js/jquery.tabs.js"></script>
     <script type="text/javascript" src="bower_components/swiper/dist/idangerous.swiper.min.js"></script>
@@ -19,28 +21,21 @@
   </head>
   <body>
 
-    <header class="branding">
-      <div class="container">
-        <div class="branding__sitename-wrapper">
-          <a class="branding__sitename" href="#">
-            <img src="images/logoiwom.png" alt="IWOM Outerwear" title="Jump to the home page">
-          </a>
-        </div>
-        <ul class="branding__nav">
-          <li class="branding__navitem nav-trigger"><a href="#nav-open">Menu</a></li>
-          <li class="branding__navitem"><a href="#">Cart</a></li>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo"><img src="images/logoiwom.png" alt="IWOM Outerwear" title="Jump to the home page"></a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a href="sass.html">Hunting</a></li>
+          <li><a href="components.html">Stadium</a></li>
+          <li><a href="javascript.html">Dealers</a></li>
+          <li><a href="javascript.html"><i class="mdi-action-shopping-cart right"></i>Shopping Cart</a></li>
         </ul>
-      </div>
-    </header>
 
-    <nav class="nav">
-      <ul class="nav__menu">
-        <li class="nav__menuitem"><a href="#1/"><span>Hunting Wear</span></a></li>
-        <li class="nav__menuitem"><a href="#1/"><span>Stadium Wear</span></a></li>
-        <li class="nav__menuitem"><a href="#1/"><span>Dealers</span></a></li>
-        <li class="nav__menuitem"><a href="#1/"><span>Testimonials</span></a></li>
-        <li class="nav__menuitem"><a href="styleguide/"><span>Styleguide</span></a></li>
-      </ul>
+        <!-- Include this line below -->
+        <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+        <!-- End -->
+
+      </div>
     </nav>
 
     <main class="main">

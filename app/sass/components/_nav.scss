@@ -2,54 +2,13 @@
  * Nav
  */
 
-.nav {
-  @include pad(gutter());
-  background: lightgray;
-  display: block;
-  overflow: hidden;
-}
+nav {
+  background-color: gray;
 
-.nav__menu {
-  margin: 0;
-  padding: 0;
-
-  li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  a {
-    @include bleed-x(gutter());
-    background: lightgray;
-    width: 100;
-    padding: 1em;
-    @include pad(gutter());
-    display: block;
-    border-bottom: 1px solid lightgray * 1.1;
-    color: black;
-    text-decoration: none;
-
-    &:hover {
-      background: lightgray * 1.1;
-    }
-
-    span {
-      @include container;
-      @include pad(gutter());
-      display: block;
+  .brand-logo img {
+    height: 54px;
+    @include breakpoint($material-medium) {
+      height: 56px;
     }
   }
-}
-
-// States
-.js .nav__menu {
-  max-height: 0;
-  transition: all .1s ease;
-}
-
-.js .nav__menu.opened {
-  max-height: 800px;
-  max-height: 100vh;
-  transition: all .8s ease;
 }

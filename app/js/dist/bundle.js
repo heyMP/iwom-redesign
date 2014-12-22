@@ -8,6 +8,8 @@
   }
   $(document).ready(function() {
     navToggle();
+    // Materialize Menu
+    $(".button-collapse").sideNav();
   });
 
   // Accessible Tabs
