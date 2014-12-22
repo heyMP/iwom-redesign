@@ -9,6 +9,10 @@
     navToggle();
     // Materialize Menu
     $(".button-collapse").sideNav();
+    // Materialize Tabs
+    $('ul.tabs').tabs();
+    // Materialize Parallax
+    $('.parallax').parallax();
   });
 
   // Accessible Tabs
@@ -50,4 +54,15 @@
       hideCloseButtonOnMobile : false,
     });
   })
+
+  // product__banner Play Video Toggle
+  function productBannerVideo() {
+    $('a.product__banner-text').on('click', function() {
+      $('.product__banner').toggleClass('play-video');
+    });
+  }
+  $(document).ready(function() {
+    productBannerVideo();
+  });
+
 })(jQuery);

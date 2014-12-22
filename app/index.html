@@ -20,7 +20,6 @@
     <script type="text/javascript" src="js/dist/bundle.js"></script>
   </head>
   <body>
-
     <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo"><img src="images/logoiwom.png" alt="IWOM Outerwear" title="Jump to the home page"></a>
@@ -34,13 +33,20 @@
         <!-- Include this line below -->
         <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
         <!-- End -->
-
       </div>
     </nav>
 
     <main class="main">
-      <div class="container">
       <article class="product">
+        <div class="product__banner">
+          <img class="product__banner-img" src="images/cold-weather.jpeg" height="720" width="1080">
+          <a class="product__banner-text" href="#1">Watch Product Video <i class="mdi-av-play-circle-outline"></i></a>
+          <div class="product__banner-vid">
+            <div class="product__banner-vid-wrapper">
+              <iframe width="100%" src="//www.youtube.com/embed/ZvdRjKs1bFY?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
         <div class="product__gallery swiper-container swiper--pager swiper--images swiper--responsive">
           <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -70,9 +76,6 @@
         </div>
         <div class="product__add-to-cart">
          <div class="button button--primary">Add to cart</div>
-        </div>
-        <div class="product__video">
-          <iframe width="100%" src="//www.youtube.com/embed/dhe7BIOQIgA?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="product__tech-icons">
           <h3>Technologies</h3>
@@ -107,62 +110,18 @@
             <div class="testimonial__author">Steve Hipson, Hard Core Hunter TV</div>
           </div>
         </div>
-        <div class="product__tabs tabs">
-          <h3 class="product__tab tabs__head">Specs</h3>
-          <div class="product__tabbody tabs__body">
-            Premium Thinsulate
-            Windproof
-            Waterproof
-            Handwarmer Pocket (Removable)
-            Kangaroo Pocket
-            Fully Zippered Bottom
-            Freedom Waist Belt System
-            Attached Rain Hood
-            Self-contained Fanny Pack Function
-            Insulated Zip-Closed Bottom Panel
-            Hand Gaiters
-            Integrated Facemask
-            SmartSilver Scent Management
-            Taped Seams
-            Tether Strap Opening for Safety Harnes
-          </div>
-          <h3 class="product__tab tabs__head">Features</h3>
-          <div class="product__tabbody tabs__body">
-            Premium Thinsulate
-            Windproof
-            Waterproof
-            Handwarmer Pocket (Removable)
-            Kangaroo Pocket
-            Fully Zippered Bottom
-            Freedom Waist Belt System
-            Attached Rain Hood
-            Self-contained Fanny Pack Function
-            Insulated Zip-Closed Bottom Panel
-            Hand Gaiters
-            Integrated Facemask
-            SmartSilver Scent Management
-            Taped Seams
-            Tether Strap Opening for Safety Harnes
-          </div>
-          <h3 class="product__tab tabs__head">Sizing</h3>
-          <div class="product__tabbody tabs__body">
-            Premium Thinsulate
-            Windproof
-            Waterproof
-            Handwarmer Pocket (Removable)
-            Kangaroo Pocket
-            Fully Zippered Bottom
-            Freedom Waist Belt System
-            Attached Rain Hood
-            Self-contained Fanny Pack Function
-            Insulated Zip-Closed Bottom Panel
-            Hand Gaiters
-            Integrated Facemask
-            SmartSilver Scent Management
-            Taped Seams
-            Tether Strap Opening for Safety Harnes
-          </div>
+
+        <div class="col s12">
+            <ul class="tabs z-depth-1">
+              <li class="tab col s4"><a href="#test1">Sizing</a></li>
+              <li class="tab col s4"><a href="#test2">Features</a></li>
+              <li class="tab col s4"><a href="#test3">Specs</a></li>
+            </ul>
         </div>
+          <div id="test1" class="col s12">Sizing</div>
+          <div id="test2" class="col s12">Features</div>
+          <div id="test3" class="col s12">Specs</div>
+
         <div class="product__camo-patterns">
           <img src="http://www.alpsoutdoorz.com/images/camo/realtree-ap.jpg" width="100" height="100">
           <img src="http://h2oimaging.homestead.com/files/QuickSiteImages/treestand.jpg" width="100" height="100">

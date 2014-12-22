@@ -51,6 +51,10 @@
   height: 50%;
   transform: translateY(-50%);
 }
+.v-center,
+%v-center {
+  @include vertical-center;
+}
 
 @mixin container {
   max-width: $container-max-width;
