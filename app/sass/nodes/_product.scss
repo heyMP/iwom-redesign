@@ -30,15 +30,25 @@
 }
 
 .product__gallery {
+  @include breakpoint(0 $material-medium) {
+    @include product-gallery-bg;
+  }
   text-align: center;
+  position: relative;
+  z-index: 10;
+
   &.col {
     padding: 0;
   }
-}
 
-.product__gallery-main {
-  @include breakpoint(0 $material-medium) {
-    @include product-gallery-bg;
+  .swiper-wrapper {
+    z-index: 10;
+  }
+
+  .swiper-pager {
+    @include breakpoint($material-medium) {
+      display: none;
+    }
   }
 
   img {
@@ -50,6 +60,10 @@
 }
 
 .product__gallery-thumbnails {
+  // Hide the product gallery on mobile
+  @include breakpoint(0 $material-medium) {
+    display: none;
+  }
   position: relative;
   z-index: 10;
 }

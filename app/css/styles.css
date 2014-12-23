@@ -909,19 +909,17 @@ category: Components - Testimonials
 
 .product__gallery {
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
-.product__gallery.col {
-  padding: 0;
-}
-
 @media (min-width: 0) and (max-width: 600px) {
-  .product__gallery-main {
+  .product__gallery {
     background-color: #808080;
     background: url("../images/cold-weather.jpeg") no-repeat;
     background-size: cover;
     position: relative;
   }
-  .product__gallery-main:after {
+  .product__gallery:after {
     content: '';
     display: block;
     height: 100%;
@@ -936,7 +934,18 @@ category: Components - Testimonials
     z-index: 1;
   }
 }
-.product__gallery-main img {
+.product__gallery.col {
+  padding: 0;
+}
+.product__gallery .swiper-wrapper {
+  z-index: 10;
+}
+@media (min-width: 600px) {
+  .product__gallery .swiper-pager {
+    display: none;
+  }
+}
+.product__gallery img {
   position: relative;
   z-index: 100;
   margin: auto;
@@ -946,6 +955,11 @@ category: Components - Testimonials
 .product__gallery-thumbnails {
   position: relative;
   z-index: 10;
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .product__gallery-thumbnails {
+    display: none;
+  }
 }
 
 .product__gallery-thumbnail {

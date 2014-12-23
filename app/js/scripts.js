@@ -13,6 +13,8 @@
     $('ul.tabs').tabs();
     // Materialize Parallax
     $('.parallax').parallax();
+    // Materialize Materialbox
+    $('.materialboxed').materialbox();
   });
 
   // Accessible Tabs
@@ -28,22 +30,25 @@
   });
 
   // Swiper Gallery
-  function swiperGallery() {
+  $(function() {
     var $swiper = $('.swiper-container');
     var pager = $swiper.hasClass('swiper--pager') === true ? true : false;
     var responsive = $swiper.hasClass('swiper--responsive') === true ? true : false;
 
-    $swiper.swiper({
+    var swiperContainer = $swiper.swiper({
       speed : 500,
       calculateHeight: responsive,
       keyboardControl: true,
       pagination: '.swiper-pager',
       paginationClickable: pager,
     });
-  }
-  $(document).ready(function(){
-    swiperGallery();
-  })
+
+    $(window).resize(function() {
+      swiperContainer.reInit();
+    });
+
+    // swiperContainer.destroy();
+  });
 
   // Swipebox
   function swipeboxLightbox() {
