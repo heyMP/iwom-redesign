@@ -15,6 +15,18 @@
     $('.parallax').parallax();
     // Materialize Materialbox
     $('.materialboxed').materialbox();
+    // Classy Loader
+    $('.loader').ClassyLoader({
+      percentage: 60,
+      speed: 8,
+      diameter: 40,
+      showText: false,
+      fontSize: '20px',
+      fontColor: 'rgba(73, 125, 164, 0.3)',
+      lineColor: '#EC3022',
+      remainingLineColor: 'rgba(73, 125, 164, 0.1)',
+      lineWidth: 5
+    });
   });
 
   // Accessible Tabs
