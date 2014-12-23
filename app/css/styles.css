@@ -879,32 +879,83 @@ category: Components - Testimonials
 /**
  * Product
  */
-.product__gallery-main {
-  background-color: #808080;
-  background: url("../images/cold-weather.jpeg") no-repeat;
-  background-size: cover;
-  text-align: center;
-  position: relative;
-}
-.product__gallery-main:after {
-  content: '';
+/* Mixins */
+.product__hero {
   display: block;
-  height: 100%;
-  width: 100%;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, at 100%, at 0%, color-stop(0%, #ffffff), color-stop(30%, rgba(255, 255, 255, 0.5)));
-  background-image: -webkit-linear-gradient(at bottom, #ffffff, rgba(255, 255, 255, 0.5) 30%);
-  background-image: linear-gradient(to at top, #ffffff, rgba(255, 255, 255, 0.5) 30%);
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  .product__hero {
+    background-color: #808080;
+    background: url("../images/cold-weather.jpeg") no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .product__hero:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, at 100%, at 0%, color-stop(0%, #ffffff), color-stop(30%, rgba(255, 255, 255, 0.5)));
+    background-image: -webkit-linear-gradient(at bottom, #ffffff, rgba(255, 255, 255, 0.5) 30%);
+    background-image: linear-gradient(to at top, #ffffff, rgba(255, 255, 255, 0.5) 30%);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
+.product__gallery {
+  text-align: center;
+}
+.product__gallery.col {
+  padding: 0;
+}
+
+@media (min-width: 0) and (max-width: 600px) {
+  .product__gallery-main {
+    background-color: #808080;
+    background: url("../images/cold-weather.jpeg") no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .product__gallery-main:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, at 100%, at 0%, color-stop(0%, #ffffff), color-stop(30%, rgba(255, 255, 255, 0.5)));
+    background-image: -webkit-linear-gradient(at bottom, #ffffff, rgba(255, 255, 255, 0.5) 30%);
+    background-image: linear-gradient(to at top, #ffffff, rgba(255, 255, 255, 0.5) 30%);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
 }
 .product__gallery-main img {
   position: relative;
   z-index: 100;
   margin: auto;
   display: block;
+}
+
+.product__gallery-thumbnails {
+  position: relative;
+  z-index: 10;
+}
+
+.product__gallery-thumbnail {
+  height: 150px;
+  padding: 3px;
+  display: inline-block;
+}
+.product__gallery-thumbnail img {
+  height: 100%;
+  width: auto;
 }
 
 .product__video {
@@ -918,56 +969,14 @@ category: Components - Testimonials
   width: 100%;
 }
 
-.product__banner {
+.product__info-box {
   position: relative;
-  display: block;
-  overflow: hidden;
-  height: 25vw;
-  -webkit-transition: height 1s ease;
-          transition: height 1s ease;
+  z-index: 10;
 }
-
-.product__banner-img {
-  width: 100%;
-  height: auto;
-}
-
-.product__banner-text {
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  width: 100%;
-  -webkit-transform: translateY(-32%);
-      -ms-transform: translateY(-32%);
-          transform: translateY(-32%);
-}
-
-.product__banner-vid {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  display: none;
-}
-
-.product__banner-vid-wrapper {
-  position: relative;
-  height: 0;
-  padding-bottom: 60vw;
-  display: block;
-}
-.product__banner-vid-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.play-video {
-  height: 60vw;
-}
-.play-video .product__banner-vid {
-  display: block;
+@media (min-width: 600px) {
+  .product__info-box {
+    background: white;
+  }
 }
 
 body {
