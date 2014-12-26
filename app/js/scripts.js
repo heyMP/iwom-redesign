@@ -1,3 +1,5 @@
+var ratingMeter = require('./rating.js');
+
 (function ($) {
   // Nav
   function navToggle() {
@@ -27,6 +29,8 @@
       remainingLineColor: 'rgba(73, 125, 164, 0.1)',
       lineWidth: 5
     });
+    // Rating Meter
+    ratingMeter();
   });
 
   // Accessible Tabs

@@ -24,6 +24,7 @@ js_include:
   - '../bower_components/jquery-accessible-tabs/js/jquery.tabs.js'
   - '../bower_components/swiper/dist/idangerous.swiper.min.js'
   - '../bower_components/swipebox/src/js/jquery.swipebox.min.js'
+  - '../bower_components/snap.svg/dist/snap.svg-min.js'
   - '../js/dist/bundle.js'
 
 # Mark which category should be the index page

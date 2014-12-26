@@ -18,6 +18,7 @@
     "modernizr": "~2.8.3",
     "jquery-accessible-tabs": "~1.9.8",
     "swiper": "~2.7.0",
-    "swipebox": "~1.2.9"
+    "swipebox": "~1.2.9",
+    "snap.svg": "~0.3.0"
   }
 }
