@@ -1,3 +1,9 @@
+/**
+ * Rating Meter
+ * Pass a DOM svg object that contains a unique id and a "meter" data attribute
+ * that contains a number between 1 and 10
+ * @param  {DOM object} target
+ */
 module.exports = function(target) {
   var canvasSize = 500,
   centre = canvasSize/2,
