@@ -98,3 +98,17 @@
     background: white;
   }
 }
+
+.product__rating-meter {
+  .ratingmeter {
+    display: block;
+    overflow: hidden;
+    width: 33%;
+    float: left;
+    margin: 0;
+  }
+}
+
+.product__rating-meter-title {
+  @include element-invisible;
+}

@@ -14,7 +14,7 @@ category: Components - Rating Meter
     <div class="ratingmeter__label">Rating</div>
     <div class="ratingmeter__meter" data-rating="8">
       8 out of 10
-      <svg id="svg" width="100%" height-"100%" viewBox="0 0 500 500" data-rating="9"></svg>
+      <svg id="svg" class=".rating-meter" width="100%" height-"100%" viewBox="0 0 500 500" data-rating="9"></svg>
     </div>
   </div>
 ```
@@ -45,6 +45,7 @@ category: Components - Rating Meter
 .ratingmeter__label {
   font-size: .8em;
   font-weight: bold;
+  text-align: center;
 }
 
 .ratingmeter__meter {

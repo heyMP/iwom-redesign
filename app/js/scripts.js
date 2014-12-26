@@ -1,7 +1,7 @@
 var ratingMeter = require('./rating.js');
 
 (function ($) {
-  "use strict";
+  'use strict';
 
   // Nav
   function navToggle() {
@@ -12,27 +12,15 @@ var ratingMeter = require('./rating.js');
   $(document).ready(function() {
     navToggle();
     // Materialize Menu
-    $(".button-collapse").sideNav();
+    $('.button-collapse').sideNav();
     // Materialize Tabs
     $('ul.tabs').tabs();
     // Materialize Parallax
     $('.parallax').parallax();
     // Materialize Materialbox
     $('.materialboxed').materialbox();
-    // Classy Loader
-    $('.loader').ClassyLoader({
-      percentage: 60,
-      speed: 8,
-      diameter: 40,
-      showText: false,
-      fontSize: '20px',
-      fontColor: 'rgba(73, 125, 164, 0.3)',
-      lineColor: '#EC3022',
-      remainingLineColor: 'rgba(73, 125, 164, 0.1)',
-      lineWidth: 5
-    });
     // Rating Meter
-    $('.ratingmeter__meter-svg').each(function() {
+    $('.rating-meter').each(function() {
       var target = $(this);
       ratingMeter(target);
     });
@@ -40,9 +28,9 @@ var ratingMeter = require('./rating.js');
 
   // Accessible Tabs
   function accessibleTabs() {
-    $(".tabs").accessibleTabs({
+    $('.tabs').accessibleTabs({
         tabhead:'.tabs__head',
-        fx:"fadeIn",
+        fx:'fadeIn',
         tabbody: '.tabs__body'
     });
   }
@@ -79,7 +67,7 @@ var ratingMeter = require('./rating.js');
     swipeboxLightbox({
       hideCloseButtonOnMobile : false,
     });
-  })
+  });
 
   // product__banner Play Video Toggle
   function productBannerVideo() {
