@@ -1,6 +1,8 @@
 var ratingMeter = require('./rating.js');
 
 (function ($) {
+  "use strict";
+
   // Nav
   function navToggle() {
     $('.nav-trigger a').on('click', function() {
@@ -30,7 +32,10 @@ var ratingMeter = require('./rating.js');
       lineWidth: 5
     });
     // Rating Meter
-    ratingMeter();
+    $('.ratingmeter__meter-svg').each(function() {
+      var target = $(this);
+      ratingMeter(target);
+    });
   });
 
   // Accessible Tabs
