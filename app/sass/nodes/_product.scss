@@ -96,14 +96,18 @@
   z-index: 10;
   @include breakpoint($material-medium) {
     background: white;
+    font-size: .8em;
   }
 }
 
 .product__rating-meter {
+  display: flex;
+  justify-content: center;
+
   .ratingmeter {
     display: block;
     overflow: hidden;
-    width: 33%;
+    width: 25%;
     float: left;
     margin: 0;
   }
@@ -111,4 +115,12 @@
 
 .product__rating-meter-title {
   @include element-invisible;
+}
+
+.product__quick-links {
+  font-size: .8em;
+
+  a {
+    display: block;
+  }
 }

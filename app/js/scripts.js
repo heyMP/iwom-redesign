@@ -19,6 +19,9 @@ var ratingMeter = require('./rating.js');
     $('.parallax').parallax();
     // Materialize Materialbox
     $('.materialboxed').materialbox();
+    // Materialize Modal. The "href" attribute of .modal-trigger must specify
+    // the modal ID that wants to be triggered.
+    $('.modal-trigger').leanModal();
     // Rating Meter
     $('.rating-meter').each(function() {
       var target = $(this);
