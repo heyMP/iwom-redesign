@@ -88,11 +88,39 @@
 }
 
 .product__info-box {
+  @include owl();
   position: relative;
   @include breakpoint($material-medium) {
     background: white;
     font-size: .8em;
   }
+  @include breakpoint($material-large) {
+    margin-top: 2em;
+    border: 4px solid rgba(255,255,255, 0.7);
+  }
+}
+
+.product__title {
+  margin-bottom: 0;
+
+  & + *:first-of-type {
+    // Remove the maring of the first element directly after
+    // the product title.
+    margin-top: 0;
+  }
+}
+
+.product__series {
+  margin-top: 0;
+}
+
+.product__price {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.product__description {
+  @include margin-fixer;
 }
 
 .product__rating-meter {
@@ -116,8 +144,14 @@
 
 .product__quick-links {
   font-size: .8em;
+  margin-top: 1em;
 
   a {
     display: block;
   }
+}
+
+.product__add-to-cart {
+  margin-top: 1em;
+  text-align: right;
 }
