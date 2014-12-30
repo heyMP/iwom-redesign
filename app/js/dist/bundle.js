@@ -72,6 +72,8 @@ var ratingMeter = require('./rating.js');
     // Materialize Modal. The "href" attribute of .modal-trigger must specify
     // the modal ID that wants to be triggered.
     $('.modal-trigger').leanModal();
+    // Materialize Select
+    $('select').not('.disabled').material_select();
     // Rating Meter
     $('.rating-meter').each(function() {
       var target = $(this);
