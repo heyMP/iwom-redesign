@@ -32,7 +32,7 @@
 
   &.col {
     padding: 0;
-    @include breakpoint($material-large) {
+    @include breakpoint($material-medium) {
       // We are going to make the background of the product gallery be full width.
       width: 100% !important;
       padding-right: 50%;
@@ -82,7 +82,7 @@
 
 .product__videos {
   position: relative;
-  margin: 0 -50vw;
+  margin: 0 calc(-50vw + 50%);
   @include background-image(
     linear-gradient(180deg, rgba(12,13,13,1.00) 0%, rgba(54,54,54,1.00) 100%)
   );
@@ -116,6 +116,7 @@
 
 .product__video {
   @extend %container;
+  position: relative;
 }
 
 .product__vid-wrapper {
