@@ -22,21 +22,21 @@
 
 .product__hero {
   display: block;
-  overflow: hidden;
 }
 
 .product__gallery {
   @include product-gallery-bg;
   text-align: center;
   position: relative;
+  width: 100vw;
 
   &.col {
     padding: 0;
     @include breakpoint($material-large) {
       // We are going to make the background of the product gallery be full width.
       width: 100% !important;
-      margin-right: -50% !important;
       padding-right: 50%;
+      margin-right: -50% !important;
     }
   }
 
@@ -75,7 +75,50 @@
   }
 }
 
+.product_videos-wrapper {
+  @extend %container;
+  overflow: visible;
+}
+
+.product__videos {
+  position: relative;
+  margin: 0 -50vw;
+  @include background-image(
+    linear-gradient(180deg, rgba(12,13,13,1.00) 0%, rgba(54,54,54,1.00) 100%)
+  );
+  padding: 2em inherit;
+  @include breakpoint($material-medium) {
+    padding-top: 3em;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-top: 1em solid white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -.5em;
+    @include breakpoint($material-medium) {
+      border-width: 2em;
+      margin-left: -1em;
+    }
+  }
+}
+
+.product__video-title {
+  font-size: $font-content-subhead;
+}
+
 .product__video {
+  @extend %container;
+}
+
+.product__vid-wrapper {
   position: relative;
   padding-top: 60%;
 
@@ -97,6 +140,7 @@
   @include breakpoint($material-large) {
     margin-top: 2em;
     border: 4px solid rgba(255,255,255, 0.7);
+    position: relative;
   }
 }
 
@@ -125,13 +169,11 @@
 
 .product__rating-meter {
   display: block;
-  overflow: hidden;
   display: flex;
   justify-content: center;
 
   .ratingmeter {
     display: block;
-    overflow: hidden;
     width: 25%;
     float: left;
     margin: 0;
@@ -154,4 +196,12 @@
 .product__add-to-cart {
   margin-top: 1em;
   text-align: right;
+}
+
+.product__testimonials {
+  @extend %container;
+}
+
+.product__testimonials-title {
+  font-size: $font-content-subhead;
 }
