@@ -9,7 +9,7 @@
   background-size: cover;
   position: relative;
 
-  &:after {
+  &:before {
     content: '';
     display: block;
     height: 100%;
@@ -17,32 +17,30 @@
     @include background-image(linear-gradient(at bottom, white, rgba(255,255,255, 0.5) 30%));
     position: absolute;
     bottom: 0;
-    z-index: 1;
   }
 }
 
 .product__hero {
   display: block;
   overflow: hidden;
-  @include breakpoint($material-medium) {
-    @include product-gallery-bg;
-  }
 }
 
 .product__gallery {
-  @include breakpoint(0 $material-medium) {
-    @include product-gallery-bg;
-  }
+  @include product-gallery-bg;
   text-align: center;
   position: relative;
-  z-index: 10;
 
   &.col {
     padding: 0;
+    @include breakpoint($material-large) {
+      // We are going to make the background of the product gallery be full width.
+      width: 100% !important;
+      margin-right: -50% !important;
+      padding-right: 50%;
+    }
   }
 
   .swiper-wrapper {
-    z-index: 10;
   }
 
   .swiper-pager {
@@ -53,7 +51,6 @@
 
   img {
     position: relative;
-    z-index: 100;
     margin: auto;
     display: block;
   }
@@ -65,7 +62,6 @@
     display: none;
   }
   position: relative;
-  z-index: 10;
 }
 
 .product__gallery-thumbnail {
@@ -93,7 +89,6 @@
 
 .product__info-box {
   position: relative;
-  z-index: 10;
   @include breakpoint($material-medium) {
     background: white;
     font-size: .8em;
@@ -101,6 +96,8 @@
 }
 
 .product__rating-meter {
+  display: block;
+  overflow: hidden;
   display: flex;
   justify-content: center;
 
