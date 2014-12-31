@@ -8,37 +8,27 @@
   background: url('../images/cold-weather.jpeg') no-repeat;
   background-size: cover;
   position: relative;
+  background-attachment: fixed;
 
   &:before {
     content: '';
     display: block;
     height: 100%;
     width: 100%;
-    @include background-image(linear-gradient(at bottom, white, rgba(255,255,255, 0.5) 30%));
+    @include background-image(linear-gradient(at bottom, white, white 10%, rgba(255,255,255, 0.5) 40%));
     position: absolute;
     bottom: 0;
   }
 }
 
 .product__hero {
+  @include product-gallery-bg;
   display: block;
 }
 
 .product__gallery {
-  @include product-gallery-bg;
   text-align: center;
   position: relative;
-  width: 100vw;
-
-  &.col {
-    padding: 0;
-    @include breakpoint($material-medium) {
-      // We are going to make the background of the product gallery be full width.
-      width: 100% !important;
-      padding-right: 50%;
-      margin-right: -50% !important;
-    }
-  }
 
   .swiper-wrapper {
   }
@@ -77,11 +67,6 @@
   }
 }
 
-.product_videos-wrapper {
-  // @extend %container;
-  overflow: visible;
-}
-
 .product__videos {
   position: relative;
   @include background-image(linear-gradient(180deg, rgba(12,13,13,1.00) 0%, rgba(54,54,54,1.00) 100%));
@@ -101,10 +86,10 @@
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -.5em;
+    margin-left: -1em;
     @include breakpoint($material-medium) {
       border-width: 2em;
-      margin-left: -1em;
+      margin-left: -2em;
     }
   }
 
@@ -119,7 +104,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    margin-left: -.5em;
+    margin-left: -1em;
     margin-bottom: - .9em;
   }
 }
@@ -147,9 +132,9 @@
 
 .product__info-box {
   @include owl();
+  background: white;
   position: relative;
   @include breakpoint($material-medium) {
-    background: white;
     font-size: .8em;
   }
   @include breakpoint($material-large) {
