@@ -78,13 +78,12 @@
 }
 
 .product_videos-wrapper {
-  @extend %container;
+  // @extend %container;
   overflow: visible;
 }
 
 .product__videos {
   position: relative;
-  margin: 0 calc(-50vw + 50%);
   @include background-image(linear-gradient(180deg, rgba(12,13,13,1.00) 0%, rgba(54,54,54,1.00) 100%));
   padding: 2em inherit;
   @include breakpoint($material-medium) {
@@ -121,7 +120,7 @@
     bottom: 0;
     left: 50%;
     margin-left: -.5em;
-    margin-bottom: -.9em;
+    margin-bottom: - .9em;
   }
 }
 
@@ -130,7 +129,7 @@
 }
 
 .product__video {
-  @extend %container;
+  // @extend %container;
   position: relative;
 }
 
