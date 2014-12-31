@@ -24,6 +24,8 @@ var ratingMeter = require('./rating.js');
     $('.modal-trigger').leanModal();
     // Materialize Select
     $('select').not('.disabled').material_select();
+    // Materialize Collapse
+    $('.collapsible').collapsible({ "accordion" : false });
     // Rating Meter
     $('.rating-meter').each(function() {
       var target = $(this);

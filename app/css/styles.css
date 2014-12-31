@@ -902,6 +902,7 @@ category: Components - Testimonials
   background-image: -webkit-linear-gradient(270deg, #0c0d0d 0%, #363636 100%);
   background-image: linear-gradient(180deg, #0c0d0d 0%, #363636 100%);
   padding: 2em inherit;
+  padding-bottom: 1em;
 }
 @media (min-width: 600px) {
   .product__videos {
@@ -948,6 +949,11 @@ category: Components - Testimonials
 
 .product__video {
   position: relative;
+  max-width: 650px;
+  margin: auto;
+}
+.product__video + .product__video {
+  margin-top: 1em;
 }
 
 .product__vid-wrapper {
@@ -1020,6 +1026,8 @@ category: Components - Testimonials
   width: 25%;
   float: left;
   margin: 0;
+  max-width: 150px;
+  margin-right: 1em;
 }
 
 .product__rating-meter-title {
