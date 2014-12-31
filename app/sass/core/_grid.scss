@@ -12,7 +12,7 @@ $susy: (
   math: fluid,
 );
 
-.container,
+// .container,
 %container {
   @include container;
   @include pad(gutter());

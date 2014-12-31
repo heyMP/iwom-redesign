@@ -236,8 +236,6 @@ img {
  * Misc
  */
 .clearfix,
-.container,
-.product__testimonials,
 .ratingmeter,
 .testimonial {
   overflow: auto;
@@ -348,15 +346,6 @@ map.
 /**
  * Grids
  */
-.container,
-.product__testimonials {
-  max-width: 50em;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2.85714%;
-  padding-right: 2.85714%;
-}
-
 .container-breakout {
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
