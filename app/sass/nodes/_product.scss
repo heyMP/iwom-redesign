@@ -44,6 +44,8 @@
   }
 
   .swiper-pager {
+    position: relative;
+
     @include breakpoint($material-medium) {
       display: none;
     }
@@ -83,9 +85,7 @@
 .product__videos {
   position: relative;
   margin: 0 calc(-50vw + 50%);
-  @include background-image(
-    linear-gradient(180deg, rgba(12,13,13,1.00) 0%, rgba(54,54,54,1.00) 100%)
-  );
+  @include background-image(linear-gradient(180deg, rgba(12,13,13,1.00) 0%, rgba(54,54,54,1.00) 100%));
   padding: 2em inherit;
   @include breakpoint($material-medium) {
     padding-top: 3em;
@@ -107,6 +107,21 @@
       border-width: 2em;
       margin-left: -1em;
     }
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-top: 1em solid #363636;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -.5em;
+    margin-bottom: -.9em;
   }
 }
 

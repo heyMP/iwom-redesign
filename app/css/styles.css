@@ -882,6 +882,9 @@ category: Components - Testimonials
     margin-right: -50% !important;
   }
 }
+.product__gallery .swiper-pager {
+  position: relative;
+}
 @media (min-width: 600px) {
   .product__gallery .swiper-pager {
     display: none;
@@ -948,6 +951,20 @@ category: Components - Testimonials
     border-width: 2em;
     margin-left: -1em;
   }
+}
+.product__videos:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-top: 1em solid #363636;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -.5em;
+  margin-bottom: -.9em;
 }
 
 .product__video-title {
